@@ -1,5 +1,3 @@
-# プロフィール
-
 お仕事のご依頼は[TwitterのDM](https://twitter.com/messages/compose?recipient_id=812979422554779648) 、もしくは yo@yagipy.me までお願いします。
 
 ## あなたは誰
