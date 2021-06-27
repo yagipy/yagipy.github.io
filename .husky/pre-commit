@@ -1,4 +1,5 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-#npm run build:pdf
+npm run build:pdf
+git add ./docs/README.pdf
