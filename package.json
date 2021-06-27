@@ -1,0 +1,14 @@
+{
+  "name": "resume",
+  "version": "0.1.0",
+  "description": "resume",
+  "scripts": {
+    "build:pdf": "md-to-pdf docs/README.md --config-file ./pdf-configs/config.js",
+    "prepare": "husky install"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "husky": "^6.0.0",
+    "md-to-pdf": "^3.1.1"
+  }
+}
