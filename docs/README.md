@@ -1,16 +1,15 @@
 お仕事のご依頼は[TwitterのDM](https://twitter.com/messages/compose?recipient_id=812979422554779648) 、もしくは yo@yagipy.me までお願いします。
 
 ## あなたは誰
-
 八木橋拓之([@yagipy_](https://twitter.com/yagipy_) )です。  
 特にReact.jsでのWebクライアント開発とパブリッククラウド(AWS, GCP)を用いたインフラ/DevOps構築を得意としています。  
-Node.js/Railsを用いたAPIサーバー開発、Androidアプリ開発も対応可能です。  
+golang/Node.js/Railsを用いたAPIサーバー開発、Androidアプリ開発も対応可能です。  
 最近の業務内容としては、システム全体の設計(インフラ/DB/API etc..)とベースとなるコードの作成を行っています。  
 その後、レビューやペアプロ等を通して、設計意図の共有やメンバーが設計に沿った実装を行えるようにサポートをしています。
 
 ## できること、やってきたこと
 - Webクライアント
-  - JavaScript/TypeScript/React/Next.js
+  - JavaScript/TypeScript/React/Next.js/Vue.js
   - 設計
   - ベースコードの構築
 - サーバー
@@ -19,19 +18,26 @@ Node.js/Railsを用いたAPIサーバー開発、Androidアプリ開発も対応
   - ベースコードの構築
 - インフラ
   - AWS
-    - ECSを使用した複数コンテナのインフラ構築
-    - APIGateway+Lambdaのサーバーレス構成
+    - EC2 + RDSの基本的な構築
+    - ECS on Fargateを使用した複数コンテナのインフラ構築
+    - APIGateway + Lambdaのサーバーレス構成
 - Android
   - 得意ではないですが、MVVM、DataBinding、RxJava、Flow、Dagger2等の基本的な設計やライブラリは他者の実装を参考に基本的な実装は可能です
   - 求められればベースの実装も対応できますが、大規模開発に耐えられるベース構築ができるかと言われると微妙です
 
 ## 興味
 より多くのユーザーや開発者が使用しているサービスやライブラリを書くことに興味があります。  
-担当領域の広さに比例してやる気が高まる傾向があります。幅広い領域を担当することでより全体最適な判断をできる確率が高まると感じています。  
-新しい技術を触ることが好きな傾向にあります。  
+担当領域の広さに比例してやる気が高まる傾向があります。幅広い領域を担当することでより全体最適な判断をできる確率が高まると考えています。  
+
+新しい技術を触ることが好きです。  
 新しい技術を使用することによって、今までは極めて困難だった実装が簡単に実装できることや開発者体験が良くなることが多く、そこに楽しみを感じています。
 
-技術的にはRust, golang, wasm, コンパイラ, リンカ, web標準に興味があります。
+現在興味のある技術分野は下記になります。
+- micro services
+- golang
+- Rust
+- wasm
+- web standards
 
 ## SNS
 - [Twitter](https://twitter.com/yagipy_)
@@ -51,9 +57,12 @@ Webフロントエンド/バックエンドに関する意思決定や設計、�
 
 - open apiやGraphQL、gRPCを使用したスキーマ駆動開発の導入
   - GraphQL(graphql-ruby, apollo-client)の導入
-- terraform、dockerを使用したIaCの導入
+  - gRPCの導入(ruby, golangのサービス間通信、grpc-gatewayを使用したHTTP通信の提供)
+- terraformを使用したIaCの導入
 - Next.jsの導入
 - Recoilの導入
+- ECS on Fargateを使用した本番環境のDocker化
+  - 開発環境でのみ使用されていたDockerを本番環境に導入
 </details>
 
 #### 教育グループリーダーとして
@@ -64,7 +73,7 @@ Webフロントエンド/バックエンドに関する意思決定や設計、�
 
 - KPIの立案・作成・運用
 - コンピテンシーマトリクスの立案・作成・運用
-- エンジニアメンターシップ制度の立案・作成・運用
+- エンジニアメンターシップ制度の立案・作成・実施・運用
 - 研修制度のプラッシュアップ
 - テックリードによる塾形式の勉強会の立案・実施
 - ライブラリ/設計比較検討会の立案・実施
@@ -145,6 +154,7 @@ https://prtimes.jp/main/html/rd/p/000000003.000036295.html
 - [chameleon editor](https://cameleon-editor.netlify.app/)
   - 自作マークダウンエディタです
   - Rustやwasmを使用しています
+  - 詳しくは[こちら](https://blog.yagipy.me/md-editor-with-rust-parser-on-the-web)
 - [blog](https://blog.yagipy.me/)
   - Next.js使用、TailwindCSS使用、PWA対応、AMP対応、OGP画像の自動生成等を行っています
   - 詳しくは[こちら](https://blog.yagipy.me/build-blog)
