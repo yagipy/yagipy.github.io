@@ -1,6 +1,6 @@
 お仕事のご依頼は[TwitterのDM](https://twitter.com/messages/compose?recipient_id=812979422554779648) 、もしくは yo@yagipy.me までお願いします。
 
-## あなたは誰
+## 自己紹介
 八木橋拓之(Hiroyuki Yagihashi)です。  
 特にGo/Node.jsを使用したAPIサーバーや開発ツールの開発、パブリッククラウド(AWS, GCP)を用いたインフラ/DevOps構築を得意としています。  
 Reactを使用したWebクライアントの開発、Go/Node.jsの他にRailsを用いたAPIサーバー開発、Androidアプリ開発も対応可能です。  
