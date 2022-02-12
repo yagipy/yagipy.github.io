@@ -1,10 +1,11 @@
-お仕事のご依頼は[TwitterのDM](https://twitter.com/messages/compose?recipient_id=812979422554779648) 、もしくは yo@yagipy.me までお願いします。
+お仕事のご依頼は[TwitterのDM](https://twitter.com/messages/compose?recipient_id=812979422554779648) 、もしくは yo@yagipy.me までお願いします。  
+最終更新日: 2021/02/13
 
 ## 自己紹介
 八木橋拓之(Hiroyuki Yagihashi)です。  
-特にGo/Node.jsを使用したAPIサーバーや開発ツールの開発、パブリッククラウド(AWS, GCP)を用いたインフラ/DevOps構築を得意としています。  
+特にGo/Node.jsを使用したAPIサーバーや開発ツールの開発、AWSを用いたインフラ/DevOps構築を得意としています。  
 Reactを使用したWebクライアントの開発、Go/Node.jsの他にRailsを用いたAPIサーバー開発、Androidアプリ開発も対応可能です。  
-最近の業務内容としては、基本設計(要件が技術的に可能かどうかの検証、外部APIとの連携フロー作成)、詳細設計(DB設計、API設計)、ベースコードの作成、会社単位で導入事例のない技術の検証と実装を行い、他の部分は困ったら適宜サポートするというのがメインになります。  
+最近の業務内容としては、基本設計(要件が技術的に可能かどうかの検証、外部APIとの連携フロー作成)、詳細設計(DB設計、API設計、技術選定)、ベースコードの作成、会社単位で導入事例のない技術の検証と実装を行い、他の部分は困ったら適宜サポートするというのがメインになります。  
 サポートは主にレビューやペアプロ等を通して、設計意図の共有やメンバーが設計に沿った実装を行えるようにしています。
 
 ## 興味
@@ -39,7 +40,7 @@ Reactを使用したWebクライアントの開発、Go/Node.jsの他にRailsを
 Webフロントエンド/バックエンドに関する意思決定や設計、技術選定、レビューを担当。
 
 - open apiやGraphQL、gRPCを使用したスキーマ駆動開発の導入
-  - GraphQL(graphql-ruby, apollo-client)の導入
+  - GraphQL(gqlgen, graphql-ruby, apollo-client)の導入
   - gRPCの導入(ruby, golangのサービス間通信、grpc-gatewayを使用したHTTP通信の提供)
 - terraformを使用したIaCの導入
 - Next.jsの導入
@@ -52,6 +53,7 @@ Webフロントエンド/バックエンドに関する意思決定や設計、�
 <details>
 
 教育グループには各プラットフォームのテックリードが参加しており、会社レベルでの教育に関する施策の立案や実行を担当。  
+エンジニア評価制度に関しても作成。
 主に行った施策は下記になります。
 
 - KPIの立案・作成・運用
@@ -70,7 +72,38 @@ Webフロントエンド/バックエンドに関する意思決定や設計、�
 [2021年の詳細](https://blog.yagipy.me/2021-in-review)  
 [2020年の詳細](https://blog.yagipy.me/2020-in-review)
 
-- 工事現場での無傷事故報告アプリ(2021/06~現在)
+### オンライン診療アプリ(2021/11~現在)
+
+<概要>  
+オンライン診療を行うアプリ。
+
+<役割>  
+- Webフロントエンド、バックエンドのエンジニアリード
+  - 要件定義(お客さんとのMTG、技術的な部分に関しての質問回答)
+  - 基本設計(要件が技術的に可能かどうかの検証、外部APIとの連携フロー構築)
+  - 詳細設計(DB設計、API設計、技術選定)
+  - ベースコードの作成
+  - 会社単位で導入事例のない技術の検証と実装
+- Webフロントエンド、バックエンドのプロジェクトマネジメント(メンバー数5名)
+  - スケジュール、進捗管理
+  - 品質管理(レビュー、ペアプロ、テスト)
+  - 業務委託面談
+
+<技術>  
+- Go
+  - gqlgen
+  - ent
+- AWS
+  - ECS on Fargate
+  - Aurora
+- React
+  - vite
+  - ChakraUI
+
+<担当業務>  
+- gqlgen、entを使用したベースコードの構築
+
+### 工事現場での無傷事故報告アプリ(2021/06~現在)
 
 今まで会社で使用していたサーバーサイドの言語はRubyとTypeScriptでしたが、この案件で初めてGoを導入しました。  
 ただ、社内でGoを書ける人が少なかったので、アプリケーションレイヤをマイクロサービス化し部分的かつ段階的にGoを導入していきました。  
@@ -81,7 +114,7 @@ grpc-gatewayを使用して各クライアント(Webフロント、iOS、Android
 インフラについても、今まではAWS EC2にAnsibleでプロビジョニングする形でしたが、サーバーレスかつコンテナ化を実現したいという理由で、ECS on Fargate上に構築しました。  
 サーバーレスかつコンテナ化することで、インフラ管理コストの大幅な軽減、AutoScalingの容易化及び高速化、ベンダーロックインの回避を実現できました。
 
-- 認証認可基盤システム(2020/10~現在)
+### 認証認可基盤システム(2020/10~現在)
 
 管理画面とAPI開発がメインでした。(APIは15本あります。)  
 管理画面がセキュリテイ要件を満たすためにEC2ホスティング、API側はAPI Gateway + Lambdaのマイクロサービス構成です。DBはRDSです。(コネクション管理はRDS Proxyを使用しています。)  
@@ -90,20 +123,20 @@ Serverless FrameworkやAWS SAMはインフラの設定に意図しない変更�
 ですが、取引会社さんの方で変更する部分が大体分かってきたというのもあり、大きな機能追加開発が入るタイミングでServerless Frameworkを導入しました。  
 導入によって基盤全体の見通しが良くなっただけではなく、属人化の排除、インフラ設定の共通化、テスト環境と開発環境での実行が容易に出来るようになりました。   
 
-- 大手ハウスメーカー顧客管理サービス(2020/2 ~ 2020/6)
+### 大手ハウスメーカー顧客管理サービス(2020/2 ~ 2020/6)
 
 Web フロント(React)/バックエンド(Rails)を担当しました。  
 主に React を使用して Web クライアントの実装を行っていました。  
 react-pdf を使用したクライアント側での PDF 生成、複数ファイルのアップロード機能、react-table を使用した週次カレンダー機能等を実装しました。  
 APIサーバーについてもいくつかAPIを実装しており、各区分ごとにソートを行う処理やパフォーマンスの最適化などを行いました。
 
-- 大手メガネメーカー店舗向けサービス(2020/1 ~ 2020/9)
+### 大手メガネメーカー店舗向けサービス(2020/1 ~ 2020/9)
 
 バックエンド(Rails)/Android(Java)をメインに開発してました。  
 Railsアップグレード(4.2->5.2)、総合決済サービスを使用した決済機能のベース実装等を担当しました。
 Android は楽天Pay、LINEPayの決済機能、クレジットカードのカメラ読み取り機能の実装を担当しました。
 
-- 宿泊者管理サービス(2020/6 ~ 2020/9)
+### 宿泊者管理サービス(2020/6 ~ 2020/9)
 
 Webフロント/バックのリードとして、技術選定からアーキテクト、実装まで一通りの工程を担当しました。
 Rails を使用した GraphQL サーバー構築、Next.js を使用した Web クライアント構築、terraform でのインフラ構築を担当しました。
@@ -115,8 +148,7 @@ Rails を使用した GraphQL サーバー構築、Next.js を使用した Web �
 <details>
 
 インターンとして参画。  
-SNS上で応援を集められるサービス「ちあちあ」のインフラ構築を担当。  
-https://prtimes.jp/main/html/rd/p/000000003.000036295.html
+SNS上で応援を集められるサービス「[ちあちあ](https://prtimes.jp/main/html/rd/p/000000003.000036295.html) 」のインフラ構築を担当。
 
 #### 使用技術
 - AWS
@@ -150,6 +182,10 @@ https://prtimes.jp/main/html/rd/p/000000003.000036295.html
   - [登壇資料](https://speakerdeck.com/yagipy/github-oneliner-command)
 
 ### OSS
+Owner - 私自身が作成し運用しているOSSになります  
+Maintainer - リポジトリに対するWrite権限を持っているOSSになります  
+Contributor - コントリビュートしたことのあるOSSになります(ここでは私自身が作成したPRがマージされたことのあるOSSに限定しています)
+
 - Owner - [maintidx](https://github.com/yagipy/maintidx)
   - maintainability indexを計測する自作の静的解析ツールです
   - 詳しくは[こちら](https://blog.yagipy.me/analyze-maintainability-index)
@@ -160,7 +196,7 @@ https://prtimes.jp/main/html/rd/p/000000003.000036295.html
 - Owner - [blog](https://blog.yagipy.me/)
   - Next.js使用、TailwindCSS使用、PWA対応、AMP対応、OGP画像の自動生成等を行っています
   - 詳しくは[こちら](https://blog.yagipy.me/build-blog)
-- Team member - [golangci-lint](https://github.com/golangci/golangci-lint)
+- Maintainer - [golangci-lint](https://github.com/golangci/golangci-lint)
   - Goの静的解析ツールをまとめて実行してくれるツールです
   - [maintidx](https://github.com/yagipy/maintidx) を追加する実装をしました
 - Contributor - [go-gimei](https://github.com/mattn/go-gimei)
