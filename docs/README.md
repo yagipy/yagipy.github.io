@@ -68,7 +68,7 @@ Webフロントエンド/バックエンドに関する見積作成や設計、�
 #### 教育グループリーダーとして (2020年9月 ~ 在職中)
 <details>
 
-教育グループでは、会社レベルでの教育に関する施策の立案や実行を担当しました。  
+教育グループでは、会社レベルでの教育に関する施策の立案や実行を担当しました。(メンバー数最大4名)  
 エンジニア評価制度に関しても作成しました。  
 施策の立案や実行の過程で、「学習する組織」や「リファクタリング•ウェットウェア」、「成人発達理論による能力の成長」という本を読み、体系的な能力開発に関する知識を得ることができました。  
 主に行った施策は下記になります。
@@ -85,8 +85,8 @@ Webフロントエンド/バックエンドに関する見積作成や設計、�
 <details>
 
 プロジェクトは抜粋しています。  
-各プロジェクトの項目は「プロジェクト概要と担当領域」、「役割」、「担当工程」、「使用技術」、「担当業務」で構成されていますが、
-リードエンジニアを担当したプロジェクトのみ「利用技術や技術選定に関する思考」を追加しています。  
+各プロジェクトの項目は**プロジェクト概要と担当領域**、**役割**、**担当工程**、**使用技術**、**担当業務**で構成されていますが、
+リードエンジニアを担当したプロジェクトのみ**利用技術や技術選定に関する思考**を追加しています。  
 
 プロジェクトの網羅性は下記ブログ記事の方が高いですが、このページの方が各プロジェクトをより詳細に書いています。  
 [2021年の詳細](https://blog.yagipy.me/2021-in-review)  
@@ -127,27 +127,31 @@ GraphQLによるスキーマ駆動開発の導入の際に考えたことを書�
 - Go
   - gqlgen
   - ent
-- GMOPayment
-- Twilio
 - AWS
   - ECS on Fargate
   - Aurora(MySQL互換)
+  - Amazon SNS
+  - Amazon SES
+  - CloudFront
 - React
   - vite
   - ChakraUI
+- GitHub Actions
+- GMOPayment
+- Twilio
+- OMRON connect Cloud
 
 #### 担当業務
+- 設計(DB設計、API設計、技術選定)
+- 外部APIとのフロー構築
+- gqlgen、entを使用したベースコードの構築
+- vite、chakra UI、graphql-code-generatorを使用したベースコードの構築
+- GraphQL subscription、redis pub/sub、goroutineを使用したリアルタイムチャット機能の検証及び実装
+- Twilioを使用したビデオ通話機能の実装(サーバー側)
+- GMOPaymentを使用した定期課金機能
 - お客さんとのMTG
   - 技術的な部分に関しての質問回答
 - 工数見積
-- 要件が技術的に可能かどうかの検証、外部APIとの連携フロー構築、DB設計、API設計、技術選定
-- 外部APIとの連携フロー構築
-- Twilioを使用したビデオ通話機能
-- GMOPaymentを使用したサブスクリプション課金機能
-- 詳細設計(DB設計、API設計、技術選定)
-- gqlgen、entを使用したベースコードの構築
-- 会社単位で導入事例のない技術の検証と実装
-- GraphQL subscription、redis pubsub、goroutineを使用したリアルタイムチャット機能の検証、実装
 
 </details>
 
@@ -246,21 +250,22 @@ ECS on Fargateは、サーバーレスかつコンテナ化を実現するため
 
 #### 技術  
 - gRPC
-  - grpc-gateway
 - Go
+  - grpc-gateway
 - Ruby
   - guard
 - ECS on Fargate
 - GitHub Actions
-- Next.js(React)
+- React
+  - Next.js
   - Recoil
   - TailwindCSS
 
 #### 担当業務
-- 詳細設計(DB設計、API設計、技術選定)
-- grpc-gatewayを使用したgatewayサーバーの構築
-- Rubyを使用したgRPCサーバーの構築
-- Next.jsを使用した Web クライアントの構築
+- 設計(DB設計、API設計、技術選定)
+- grpc-gatewayを使用したgatewayサーバーのベースコード作成
+- Rubyを使用したgRPCサーバーのベースコード作成
+- Next.jsを使用した Web クライアントのベースコード作成
 - ECS on Fargateでのインフラ構築
 - GitHub Actionsを使用した自動デプロイフローの構築
 - guardを使用したRubyサーバーのオートリロード
@@ -308,6 +313,7 @@ Webアプリは新しくRecoilを導入しました。
   - ldapjs
   - bcryptjs
   - samba-client
+  - sequelize
 - AWS
   - Lambda
   - API Gateway
@@ -322,9 +328,13 @@ Webアプリは新しくRecoilを導入しました。
 
 #### 担当業務
 - 技術選定
-- ベースコードの作成
-- バッチ処理の実装 
-- APIの実装
+- Serverless Frameworkを使用したベースコードの作成
+- Next.js、Recoil、TailwindCSSを使用したベースコードの作成
+- LDAP認証の実装
+- Sambaへのファイルアップロード実装
+  - Lambda上でAmazonLinux2のネイティブバイナリパッケージ(samba-client)を使用することで実現
+- CSVをstreamにして読み込みつつDBにインサートするバッチ処理の実装
+- 各種APIの実装
 
 </details>
 
@@ -358,7 +368,7 @@ GraphQLの導入ですが、大手ハウスメーカー顧客管理サービス�
 
 その結果、問題が解決されただけではなく、今後の開発においてもGraphQLという選択肢を取ることが以前より容易になり、会社全体としても問題解決の幅が広がったと考えています。
 
-TODO: Next.jsの導入の思考を書く
+TODO: Next.jsの導入の思考を書く  
 TODO: Terraformを使用したIaCの導入の思考を書く
 
 #### 役割
@@ -394,10 +404,7 @@ TODO: Terraformを使用したIaCの導入の思考を書く
 - バックエンドエンジニア
 
 #### 担当工程
-- 要件定義
-- 設計
-- 実装
-- テスト
+- 要件定義、設計、実装、テスト
 
 #### 使用技術  
 - Ruby on Rails
