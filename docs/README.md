@@ -602,61 +602,88 @@ TODO: Terraformを使用したIaCの導入の思考を書く
 
 インターンとして参画、インフラエンジニアを担当しました。
 
+#### プロジェクト一覧
+### ちあちあ
+<table>
+  <tr>
+    <td>参画期間</td>
+    <td>2018/6~2019/3</td>
+  </tr>
+  <tr>
+    <td>担当工程</td>
+    <td>実装</td>
+  </tr>
+  <tr>
+    <td>役割</td>
+    <td>
+      インフラエンジニア
+    </td>
+  </tr>
+  <tr>
+    <td>主な使用技術</td>
+    <td>
+      AWS、EC2、ALB、Route53、Nginx、PostgresQL
+    </td>
+  </tr>
+</table>
+
 <details>
+<summary style="display: list-item">プロジェクト概要と担当領域</summary>
 
-#### プロジェクト概要と担当領域
 SNS上で応援を集められるサービス[ちあちあ](https://prtimes.jp/main/html/rd/p/000000003.000036295.html)のインフラ構築を担当しました。
+</details>
 
-#### 役割
-- インフラエンジニア
+<details>
+<summary style="display: list-item">主な担当業務</summary>
 
-#### 担当工程
-- 実装(インフラ構築)
-
-#### 主な使用技術
-- AWS
-  - EC2
-  - ELB
-  - Route53
-- Nginx
-- PostgreSQL
-
-#### 主な担当業務
 - EC2上にDjango実行環境の構築
   - DB: PostgreSQL
   - Webサーバー: Nginx
 - お名前.comからRoute53へのドメイン移管
 - お名前.comからRoute53へDNSを変更
+
 </details>
 
 ### 株式会社Hatty&Co. (2018年6月 ~ 2018年10月)
 
 1人目のエンジニアとして参画、CTOを担当しました。  
 
-<details>
+#### プロジェクト一覧
+### Camel
+<table>
+  <tr>
+    <td>参画期間</td>
+    <td>2018/6~2018/10</td>
+  </tr>
+  <tr>
+    <td>担当工程</td>
+    <td>要件定義、設計、実装、テスト</td>
+  </tr>
+  <tr>
+    <td>役割</td>
+    <td>
+      エンジニア
+    </td>
+  </tr>
+  <tr>
+    <td>主な使用技術</td>
+    <td>
+      Ruby、Ruby on Rails、AWS、EC2、ALB、RDS、Route53、Nginx、MySQL
+    </td>
+  </tr>
+</table>
 
-#### プロジェクト概要と担当領域
-大学のサークルを経由してチャットできるマッチングアプリ、"Camel"の構築を担当しました。  
+<details>
+<summary style="display: list-item">プロジェクト概要と担当領域</summary>
+
+大学のサークルを経由してチャットできるマッチングアプリ、Camelの構築を担当しました。  
 資金調達や開発が難航したため、リリースには至りませんでした。
 
-#### 役割
-- エンジニア
-- CTO
+</details>
 
-#### 担当工程
-- 要件定義、設計、実装、テスト
+<details>
+<summary style="display: list-item">主な担当業務</summary>
 
-#### 主な使用技術
-- Ruby on Rails
-- AWS
-  - EC2
-  - ELB
-  - Route53
-  - RDS
-- Nginx
-- MySQL
-
-#### 主な担当業務
 - 機能一覧の作成
 - API設計
 - DB設計
