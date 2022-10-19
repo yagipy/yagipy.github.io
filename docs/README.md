@@ -96,7 +96,7 @@ Webフロントエンド/バックエンドに関する見積作成や設計、�
 [2021年の詳細](https://blog.yagipy.me/2021-in-review)  
 [2020年の詳細](https://blog.yagipy.me/2020-in-review)
 
-### オンライン診療アプリ
+##### オンライン診療アプリ
 <table>
   <tr>
     <td>参画期間</td>
@@ -125,14 +125,14 @@ Webフロントエンド/バックエンドに関する見積作成や設計、�
 </table>
 
 <details>
-<summary>プロジェクト概要と担当領域</summary>
+<summary style="display: list-item">プロジェクト概要と担当領域</summary>
 
 オンライン診療や医師とのチャットを行うことができるアプリです。  
 患者用のWebアプリと医療従事者用のWebアプリ、システム管理者用のWebアプリ、各Webアプリとネイティブアプリに提供するAPIサーバー、インフラ構築を担当しました。
 </details>
 
 <details>
-<summary>主な担当業務</summary>
+<summary style="display: list-item">主な担当業務</summary>
 
 - 設計(DB設計、API設計、技術選定)
 - 外部APIとのフロー構築
