@@ -151,7 +151,7 @@ Webフロントエンド/バックエンドに関する見積作成や設計、�
 </details>
 
 <details>
-<summary>利用技術や技術選定に関する思考と行動</summary>
+<summary style="display: list-item">利用技術や技術選定に関する思考と行動</summary>
 
 大きく3つのチャレンジを行いました。
 - Goの全面的な導入
