@@ -17,13 +17,28 @@
 - 各種リンク
 
 ## 基本情報
-| key      | value        |
-|----------|--------------|
-| 氏名       | 八木橋 拓之       |
-| 氏名(フリガナ) | ヤギハシ ヒロユキ    |
-| 生年月日     | 1998/10/19   |
-| 性別       | 男            |
-| 連絡先      | yo@yagipy.me |
+<table>
+  <tr>
+    <td>氏名</td>
+    <td>八木橋 拓之</td>
+  </tr>
+  <tr>
+    <td>氏名(フリガナ)</td>
+    <td>ヤギハシ ヒロユキ</td>
+  </tr>
+  <tr>
+    <td>生年月日</td>
+    <td>1998/10/19</td>
+  </tr>
+  <tr>
+    <td>性別</td>
+    <td>男</td>
+  </tr>
+  <tr>
+    <td>連絡先</td>
+    <td>yo@yagipy.me</td>
+  </tr>
+</table>
 
 ## 自己紹介
 八木橋拓之(Hiroyuki YAGIHASHI)です。  
@@ -51,7 +66,6 @@ Reactを使用したWebクライアントの開発、Go/Node.jsの他にRailsを
 
 ## 職務経歴
 ### からくり株式会社 (2019年4月 ~ 在職中)
-<details>
 
 2019年4月に新卒入社。  
 テックリード(Webフロントエンド/バックエンド)、教育グループリーダー、ソフトウェアエンジニアを担当しています。
@@ -61,7 +75,7 @@ Reactを使用したWebクライアントの開発、Go/Node.jsの他にRailsを
 
 Webフロントエンド/バックエンドに関する見積作成や設計、技術選定、レビュー、ドキュメンテーションを行いました。  
 ただ、テックリード業のための工数が毎月あるわけではなく、必要なタイミングで(新規開発立ち上げの際や新しい技術を検証/導入する際など)工数をもらって行っています。  
-主な実績は**ソフトウェアエンジニアとして**項目内の各プロジェクトごとにある**利用技術や技術選定に関する思考と行動**の項目に書いています。
+主な実績は**ソフトウェアエンジニアとして**という項目内の各プロジェクトごとにある**利用技術や技術選定に関する思考と行動**の項目に書いています。
 
 </details>
 
@@ -92,12 +106,55 @@ Webフロントエンド/バックエンドに関する見積作成や設計、�
 [2021年の詳細](https://blog.yagipy.me/2021-in-review)  
 [2020年の詳細](https://blog.yagipy.me/2020-in-review)
 
-### オンライン診療アプリ(2021/11~現在)
+### オンライン診療アプリ
+<table>
+  <tr>
+    <td>参画期間</td>
+    <td>2021/11~現在</td>
+  </tr>
+  <tr>
+    <td>担当工程</td>
+    <td>要件定義、設計、実装、テスト</td>
+  </tr>
+  <tr>
+    <td>役割</td>
+    <td>
+      Webフロントエンド/バックエンドのリードエンジニア<br />
+      Webフロントエンド/バックエンドのプロジェクトマネジメント(メンバー数最大6名)
+    </td>
+  </tr>
+  <tr>
+    <td>主な使用技術</td>
+    <td>
+      フロントエンド: TypeScript、React、vite、Chakra UI<br />
+      バックエンド: Go、gqlgen、ent<br />
+      インフラ: AWS、ECS、Fargate、SNS、SES、Aurora(MySQL互換)、CloudFront、Route53、ALB<br />
+      その他: GitHub Actions、GMOPayment、Twilio、OMRON connect Cloud
+    </td>
+  </tr>
+</table>
+
 <details>
 
 #### プロジェクト概要と担当領域
 オンライン診療や医師とのチャットを行うことができるアプリです。  
 患者用のWebアプリと医療従事者用のWebアプリ、システム管理者用のWebアプリ、各Webアプリとネイティブアプリに提供するAPIサーバー、インフラ構築を担当しました。
+
+#### 主な担当業務
+- 設計(DB設計、API設計、技術選定)
+- 外部APIとのフロー構築
+- gqlgen、entを使用したベースコードの構築
+- vite、chakra UI、graphql-code-generatorを使用したベースコードの構築
+- GraphQL subscription、redis pub/sub、goroutineを使用したリアルタイムチャット機能の検証及び実装
+- Twilioを使用したビデオ通話機能の実装(サーバー側)
+- GMOPaymentを使用した定期課金機能
+- お客さんとのMTG
+  - 技術的な部分に関しての質問回答
+- 工数見積
+- サーバーサイドのスケジュール/進捗管理
+- 品質管理(レビュー、ペアプロ)
+- 業務委託面談
+- graphql-code-generatorを使用したAPI呼び出し処理及び型の自動生成
 
 #### 利用技術や技術選定に関する思考と行動
 大きく3つのチャレンジを行いました。
@@ -168,55 +225,53 @@ Project-based monorepoの導入の際に考えたことを書きます。
 - 生成コードとスキーマの整合性をCIによって自動で担保できるようになった
 - ソースコードとPRの管理が容易になった
 
-#### 役割  
-- Webフロントエンド/バックエンドのリードエンジニア
-- Webフロントエンド/バックエンドのプロジェクトマネジメント(メンバー数最大6名)
-  - スケジュール/進捗管理
-  - 品質管理(レビュー、ペアプロ)
-  - 業務委託面談
-
-#### 担当工程
-- 要件定義、設計、実装、テスト
-
-#### 主な使用技術
-- Go
-  - gqlgen
-  - ent
-- AWS
-  - ECS on Fargate
-  - Aurora(MySQL互換)
-  - Amazon SNS
-  - Amazon SES
-  - CloudFront
-- React
-  - vite
-  - ChakraUI
-- GitHub Actions
-- GMOPayment
-- Twilio
-- OMRON connect Cloud
-
-#### 主な担当業務
-- 設計(DB設計、API設計、技術選定)
-- 外部APIとのフロー構築
-- gqlgen、entを使用したベースコードの構築
-- vite、chakra UI、graphql-code-generatorを使用したベースコードの構築
-- GraphQL subscription、redis pub/sub、goroutineを使用したリアルタイムチャット機能の検証及び実装
-- Twilioを使用したビデオ通話機能の実装(サーバー側)
-- GMOPaymentを使用した定期課金機能
-- お客さんとのMTG
-  - 技術的な部分に関しての質問回答
-- 工数見積
-- graphql-code-generatorを使用したAPI呼び出し処理及び型の自動生成
-
 </details>
 
-### 工事現場での無傷事故報告アプリ(2021/06~現在)
+### 工事現場での無傷事故報告アプリ
+<table>
+  <tr>
+    <td>参画期間</td>
+    <td>2021/06~現在</td>
+  </tr>
+  <tr>
+    <td>担当工程</td>
+    <td>要件定義、設計、実装、テスト</td>
+  </tr>
+  <tr>
+    <td>役割</td>
+    <td>
+      Webフロントエンド/バックエンドのリードエンジニア<br />
+      Webフロントエンド/バックエンドのプロジェクトマネジメント(メンバー数最大5名)
+    </td>
+  </tr>
+  <tr>
+    <td>主な使用技術</td>
+    <td>
+      フロントエンド: TypeScript、React、Next.js、Recoil、TailwindCSS<br />
+      バックエンド: gRPC、Go、grpc-gateway、Ruby、guard<br />
+      インフラ: AWS、ECS、Fargate、SNS、Aurora(MySQL互換)、CloudFront、Route53、ALB<br />
+      その他: GitHub Actions
+    </td>
+  </tr>
+</table>
+
 <details>
 
 #### プロジェクト概要と担当領域
 工事現場で無傷事故(ヒヤリハット)が発生した際に報告を行うアプリです。  
 報告された内容を確認する管理者用のWeb画面、ネイティブアプリと管理者用Web画面に提供するAPI開発を担当しました。  
+
+#### 主な担当業務
+- 設計(DB設計、API設計、技術選定)
+- grpc-gatewayを使用したGoサーバーのベースコード作成
+- gRPCを使用したRubyサーバーのベースコード作成
+- Next.jsを使用したWebクライアントのベースコード作成
+- ECS on Fargateでのインフラ構築
+- GitHub Actionsを使用した自動デプロイフローの構築
+- guardを使用したRubyサーバーのオートリロード
+- スケジュール、進捗管理
+- 品質管理(レビュー、ペアプロ)
+- 業務委託面談
 
 #### 利用技術や技術選定に関する思考と行動
 大きく3つのチャレンジを行いました。
@@ -295,46 +350,54 @@ ECS on Fargateは、サーバーレスかつコンテナ化を実現するため
 サーバーレスかつコンテナ化することで、上記問題の解決に加えて、インフラ管理コストの大幅な軽減、AutoScalingの容易化及び高速化を実現できました。  
 なお、コントロールプレーンはEKSでも可能でしたが、EKSはECSに比べて学習コストおよび運用コストが高いと考えており、今後何かしらの課題が発生した際はEKSにする可能性はあるが、問題が発生するまではECSで良いと判断しました。
 
-#### 役割
-- Webフロントエンド、バックエンドのリードエンジニア
-- Webフロントエンド、バックエンドのプロジェクトマネジメント(メンバー数最大5名)
-  - スケジュール、進捗管理
-  - 品質管理(レビュー、ペアプロ)
-
-#### 担当工程
-- 要件定義、設計、実装、テスト
-
-#### 主な使用技術  
-- gRPC
-- Go
-  - grpc-gateway
-- Ruby
-  - guard
-- ECS on Fargate
-- GitHub Actions
-- React
-  - Next.js
-  - Recoil
-  - TailwindCSS
-
-#### 主な担当業務
-- 設計(DB設計、API設計、技術選定)
-- grpc-gatewayを使用したgatewayサーバーのベースコード作成
-- Rubyを使用したgRPCサーバーのベースコード作成
-- Next.jsを使用した Web クライアントのベースコード作成
-- ECS on Fargateでのインフラ構築
-- GitHub Actionsを使用した自動デプロイフローの構築
-- guardを使用したRubyサーバーのオートリロード
-
 </details>
 
-### 認証認可基盤システム(2020/10~現在)
+### 認証認可基盤システム
+<table>
+  <tr>
+    <td>参画期間</td>
+    <td>2020/10~現在</td>
+  </tr>
+  <tr>
+    <td>担当工程</td>
+    <td>要件定義、設計、実装、テスト</td>
+  </tr>
+  <tr>
+    <td>役割</td>
+    <td>
+      Webフロントエンド/バックエンドのリードエンジニア<br />
+      Webフロントエンド/バックエンドのプロジェクトマネジメント(メンバー数最大2名)
+    </td>
+  </tr>
+  <tr>
+    <td>主な使用技術</td>
+    <td>
+      フロントエンド: TypeScript、React、Next.js、Recoil、TailwindCSS<br />
+      バックエンド: JavaScript、TypeScript、prisma、ldapjs、samba-client、sequelize、Serverless Framework<br />
+      インフラ: AWS、Lambda、API Gateway、EC2、RDS、RDS Proxy<br />
+      その他: GitHub Actions
+    </td>
+  </tr>
+</table>
+
 <details>
 
 #### プロジェクト概要と担当領域
 社員が使うアプリの認証が各アプリのサーバーで実装しており、情報が散在していた。  
 その情報を集約することを目的に認証認可基盤を作成。  
 Web管理画面とAPI開発を担当。
+
+#### 主な担当業務
+- 技術選定
+- Serverless Frameworkを使用したベースコードの作成
+- Next.js、Recoil、TailwindCSSを使用したベースコードの作成
+- LDAP認証の実装
+- Sambaへのファイルアップロード実装
+  - Lambda上でAmazonLinux2のネイティブバイナリパッケージ(samba-client)を使用することで実現
+- CSVをstreamにして読み込みつつDBにインサートするバッチ処理の実装
+- 各種APIの実装
+- スケジュール、進捗管理
+- 品質管理(レビュー、ペアプロ)
 
 #### 利用技術や技術選定に関する思考と行動
 インフラ構成や言語については、お客さんの方から要望があったため、要望に答える形で実装しました。  
@@ -353,53 +416,47 @@ Serverless FrameworkやAWS SAMはインフラの設定に意図しない変更�
 TODO: 更新する
 Webアプリは新しくRecoilを導入しました。
 
-#### 役割
-- Webフロントエンド、バックエンドのリードエンジニア
-- Webフロントエンド、バックエンドのプロジェクトマネジメント(メンバー数最大2名)
-  - スケジュール、進捗管理
-  - 品質管理(レビュー、ペアプロ)
-
-#### 担当工程
-- 要件定義、設計、実装、テスト
-
-#### 主な使用技術
-- Serverless Framework
-- Node.js(JavaScript、TypeScript)
-  - prisma
-  - ldapjs
-  - bcryptjs
-  - samba-client
-  - sequelize
-- AWS
-  - Lambda
-  - API Gateway
-  - EC2(踏み台サーバー、管理画面のホスティングサーバーとして使用)
-  - RDS
-  - RDS Proxy
-- Nginx
-- React
-  - Next.js
-  - Recoil
-  - TailwindCSS
-
-#### 主な担当業務
-- 技術選定
-- Serverless Frameworkを使用したベースコードの作成
-- Next.js、Recoil、TailwindCSSを使用したベースコードの作成
-- LDAP認証の実装
-- Sambaへのファイルアップロード実装
-  - Lambda上でAmazonLinux2のネイティブバイナリパッケージ(samba-client)を使用することで実現
-- CSVをstreamにして読み込みつつDBにインサートするバッチ処理の実装
-- 各種APIの実装
-
 </details>
 
-### 宿泊者管理サービス(2020/6 ~ 2020/9)
+### 宿泊者管理サービス
+<table>
+  <tr>
+    <td>参画期間</td>
+    <td>2020/6~2020/9</td>
+  </tr>
+  <tr>
+    <td>担当工程</td>
+    <td>要件定義、設計、実装、テスト</td>
+  </tr>
+  <tr>
+    <td>役割</td>
+    <td>
+      Webフロントエンド/バックエンドのリードエンジニア
+    </td>
+  </tr>
+  <tr>
+    <td>主な使用技術</td>
+    <td>
+      フロントエンド: TypeScript、React、Next.js、Redux、Redux Saga、Apollo Client<br />
+      バックエンド: Ruby、Ruby on Rails、graphql-ruby、capistrano<br />
+      インフラ: Terraform、AWS、EC2、RDS、ALB、S3、CloudFront<br />
+      その他: GitHub Actions
+    </td>
+  </tr>
+</table>
+
 <details>
 
 #### プロジェクト概要と担当領域
 宿泊者の入退室を管理したり、管理者とチャットやビデオ通話を行うことが出来るアプリ。
 管理者が使用するWebアプリとAPIサーバーを担当。
+
+#### 主な担当業務
+- graphql-rubyを使用したGraphQLサーバーのベースコード作成
+  - 管理者のCRUDとログイン機能の実装
+- Next.jsを使用したWebアプリのベースコード作成
+  - 管理者のCRUDとログイン機能の実装
+- Terraformを使用したインフラ構築
 
 #### 利用技術や技術選定に関する思考と行動
 大きく3つのチャレンジを行いました。
@@ -427,84 +484,82 @@ GraphQLの導入ですが、大手ハウスメーカー顧客管理サービス�
 TODO: Next.jsの導入の思考を書く  
 TODO: Terraformを使用したIaCの導入の思考を書く
 
-#### 役割
-- Webフロントエンドのリードエンジニア
-- バックエンドのリードエンジニア
-
-#### 担当工程
-- 要件定義、設計、実装、テスト
-
-#### 主な使用技術
-- Ruby on Rails
-  - graphql-ruby
-  - capistrano
-- React
-  - Next.js
-- terraform
-- AWS
-  - EC2
-  - RDS
-  - ALB
-  - S3
-  - CloudFront
-
-#### 主な担当業務
-- graphql-rubyを使用したGraphQLサーバーのベースコード作成
-  - 管理者のCRUDとログイン機能の実装
-- Next.jsを使用したWebアプリのベースコード作成
-  - 管理者のCRUDとログイン機能の実装
-- terraformを使用したインフラ構築
-
 </details>
 
-### 大手ハウスメーカー顧客管理サービス(2020/2 ~ 2020/6)
+### 大手ハウスメーカー顧客管理サービス
+<table>
+  <tr>
+    <td>参画期間</td>
+    <td>2020/2~2020/6</td>
+  </tr>
+  <tr>
+    <td>担当工程</td>
+    <td>要件定義、設計、実装、テスト</td>
+  </tr>
+  <tr>
+    <td>役割</td>
+    <td>
+      Webフロントエンド/バックエンドエンジニア
+    </td>
+  </tr>
+  <tr>
+    <td>主な使用技術</td>
+    <td>
+      フロントエンド: TypeScript、React、crate-react-app、Redux、react-pdf、react-table<br />
+      バックエンド: Ruby、Ruby on Rails、graphql-ruby、capistrano<br />
+      その他: GitHub Actions、Circle CI、Ansible
+    </td>
+  </tr>
+</table>
+
 <details>
 
 #### プロジェクト概要と担当領域
 ハウスメーカーと住宅を購入した顧客がコミュニケーションを取るアプリ。
 顧客が使用するWebアプリと大手ハウスメーカーが使用するWebアプリ、それぞれのWeb画面に提供するAPIの開発を担当。
 
-#### 役割   
-- Webフロントエンドエンジニア
-- バックエンドエンジニア
-
-#### 担当工程
-- 要件定義、設計、実装、テスト
-
-#### 主な使用技術  
-- Ruby on Rails
-- React
-  - react-pdf
-  - react-table
-
 #### 主な担当業務  
-- 複数画面のAPI繋ぎ込み(Webフロント)
-- react-pdfを使用したWebフロントでのPDF生成(Webフロント)
-- 複数ファイルのアップロード機能(Webフロント/バックエンド)
-- react-tableを使用した週次カレンダー機能の作成(Webフロント/バックエンド)  
-- 各区分ごとにソートを行う処理(バックエンド)
-- パフォーマンスの最適化(バックエンド)
+- 複数画面のAPI繋ぎ込み
+- react-pdfを使用したWebフロントでのPDF生成
+- 複数ファイルのアップロード機能
+- react-tableを使用した週次カレンダー機能の作成  
+- 各区分ごとにソートを行う処理
+- パフォーマンスの最適化
 
 </details>
 
-### 大手メガネメーカー店舗向けサービス(2019/6 ~ 2020/9)
+### 大手メガネメーカー店舗向けサービス
+<table>
+  <tr>
+    <td>参画期間</td>
+    <td>2019/6~2020/9</td>
+  </tr>
+  <tr>
+    <td>担当工程</td>
+    <td>設計、実装、テスト</td>
+  </tr>
+  <tr>
+    <td>役割</td>
+    <td>
+      バックエンドエンジニア
+      Androidエンジニア
+    </td>
+  </tr>
+  <tr>
+    <td>主な使用技術</td>
+    <td>
+      Android: Java、Android、Dagger、RxJava<br />
+      バックエンド: Ruby、Ruby on Rails、graphql-ruby、capistrano<br />
+      その他: GitHub Actions、Circle CI、Ansible
+    </td>
+  </tr>
+</table>
+
 <details>
 
 #### プロジェクト概要と担当領域
 メガネの販促アプリ。購入後は保険証をアプリで管理することが出来る。
 実際にメガネを購入するユーザーが使用するAndroidアプリと、ネイティブアプリに提供するAPIサーバーを作成。
-
-#### 役割
-- バックエンドエンジニア
-- Androidエンジニア
-
-#### 担当工程
-- 設計、実装、テスト
-
-#### 主な使用技術
-- Ruby
-  - Ruby on Rails
-- Java(Android)
 
 #### 主な担当業務
 - バックエンド
@@ -519,14 +574,13 @@ TODO: Terraformを使用したIaCの導入の思考を書く
 
 </details>
 
-</details>
-
 ---
 
 ### 株式会社taliki (2018年6月 ~ 2019年3月)
-<details>
 
 インターンとして参画、インフラエンジニアを担当しました。
+
+<details>
 
 #### プロジェクト概要と担当領域
 SNS上で応援を集められるサービス[ちあちあ](https://prtimes.jp/main/html/rd/p/000000003.000036295.html)のインフラ構築を担当しました。
@@ -551,15 +605,15 @@ SNS上で応援を集められるサービス[ちあちあ](https://prtimes.jp/m
   - Webサーバー: Nginx
 - お名前.comからRoute53へのドメイン移管
 - お名前.comからRoute53へDNSを変更
-
 </details>
 
 ---
 
 ### 株式会社Hatty&Co. (2018年6月 ~ 2018年10月)
-<details>
 
 1人目のエンジニアとして参画、CTOを担当しました。  
+
+<details>
 
 #### プロジェクト概要と担当領域
 大学のサークルを経由してチャットできるマッチングアプリ、"Camel"の構築を担当しました。  
