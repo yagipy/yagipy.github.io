@@ -89,14 +89,13 @@ Webフロントエンド/バックエンドに関する見積作成や設計、�
 
 #### ソフトウェアエンジニアとして (2019年4月 ~ 在職中)
 プロジェクトは抜粋しています。  
-各プロジェクトの項目は**プロジェクト概要と担当領域**、**役割**、**担当工程**、**主な使用技術**、**主な担当業務**で構成されていますが、
-リードエンジニアを担当したプロジェクトのみ**利用技術や技術選定に関する思考と行動**を追加しています。  
+リードエンジニアを担当したプロジェクトのみ、**利用技術や技術選定に関する思考と行動**という項目があります。  
 
 プロジェクトの網羅性は下記ブログ記事の方が高いですが、このページの方が各プロジェクトをより詳細に書いています。  
 [2021年の詳細](https://blog.yagipy.me/2021-in-review)  
 [2020年の詳細](https://blog.yagipy.me/2020-in-review)
 
-##### オンライン診療アプリ
+### オンライン診療アプリ
 <table>
   <tr>
     <td>参画期間</td>
@@ -251,12 +250,16 @@ Project-based monorepoの導入の際に考えたことを書きます。
 </table>
 
 <details>
+<summary style="display: list-item">プロジェクト概要と担当領域</summary>
 
-#### プロジェクト概要と担当領域
 工事現場で無傷事故(ヒヤリハット)が発生した際に報告を行うアプリです。  
-報告された内容を確認する管理者用のWeb画面、ネイティブアプリと管理者用Web画面に提供するAPI開発を担当しました。  
+報告された内容を確認する管理者用のWeb画面、ネイティブアプリと管理者用Web画面に提供するAPI開発を担当しました。
 
-#### 主な担当業務
+</details>
+
+<details>
+<summary style="display: list-item">主な担当業務</summary>
+ 
 - 設計(DB設計、API設計、技術選定)
 - grpc-gatewayを使用したGoサーバーのベースコード作成
 - gRPCを使用したRubyサーバーのベースコード作成
@@ -268,7 +271,11 @@ Project-based monorepoの導入の際に考えたことを書きます。
 - 品質管理(レビュー、ペアプロ)
 - 業務委託面談
 
-#### 利用技術や技術選定に関する思考と行動
+</details>
+
+<details>
+<summary style="display: list-item">利用技術や技術選定に関する思考と行動</summary>
+ 
 大きく3つのチャレンジを行いました。
 - Goの部分的な導入
 - gRPCを使用したスキーマ駆動開発の導入
@@ -376,13 +383,17 @@ ECS on Fargateは、サーバーレスかつコンテナ化を実現するため
 </table>
 
 <details>
-
-#### プロジェクト概要と担当領域
+<summary style="display: list-item">プロジェクト概要と担当領域</summary>
+ 
 社員が使うアプリの認証が各アプリのサーバーで実装しており、情報が散在していた。  
 その情報を集約することを目的に認証認可基盤を作成。  
 Web管理画面とAPI開発を担当。
 
-#### 主な担当業務
+</details>
+
+<details>
+<summary style="display: list-item">主な担当業務</summary>
+
 - 技術選定
 - Serverless Frameworkを使用したベースコードの作成
 - Next.js、Recoil、TailwindCSSを使用したベースコードの作成
@@ -394,7 +405,11 @@ Web管理画面とAPI開発を担当。
 - スケジュール、進捗管理
 - 品質管理(レビュー、ペアプロ)
 
-#### 利用技術や技術選定に関する思考と行動
+</details>
+
+<details>
+<summary style="display: list-item">利用技術や技術選定に関する思考と行動</summary>
+
 インフラ構成や言語については、お客さんの方から要望があったため、要望に答える形で実装しました。  
 APIはAPI Gateway + Lambdaの構成になっています。  
 DBはMySQL互換のRDSを使用しています。(コネクション管理はRDS Proxyを使用しています。)  
@@ -441,19 +456,27 @@ Webアプリは新しくRecoilを導入しました。
 </table>
 
 <details>
-
-#### プロジェクト概要と担当領域
+<summary style="display: list-item">プロジェクト概要と担当領域</summary>
+ 
 宿泊者の入退室を管理したり、管理者とチャットやビデオ通話を行うことが出来るアプリ。
 管理者が使用するWebアプリとAPIサーバーを担当。
 
-#### 主な担当業務
+</details>
+
+<details>
+<summary style="display: list-item">主な担当業務</summary>
+ 
 - graphql-rubyを使用したGraphQLサーバーのベースコード作成
   - 管理者のCRUDとログイン機能の実装
 - Next.jsを使用したWebアプリのベースコード作成
   - 管理者のCRUDとログイン機能の実装
 - Terraformを使用したインフラ構築
 
-#### 利用技術や技術選定に関する思考と行動
+</details>
+
+<details>
+<summary style="display: list-item">利用技術や技術選定に関する思考と行動</summary>
+ 
 大きく3つのチャレンジを行いました。
 - GraphQLの導入
 - Next.jsの導入
@@ -508,12 +531,16 @@ TODO: Terraformを使用したIaCの導入の思考を書く
 </table>
 
 <details>
-
-#### プロジェクト概要と担当領域
+<summary style="display: list-item">プロジェクト概要と担当領域</summary>
+ 
 ハウスメーカーと住宅を購入した顧客がコミュニケーションを取るアプリ。
 顧客が使用するWebアプリと大手ハウスメーカーが使用するWebアプリ、それぞれのWeb画面に提供するAPIの開発を担当。
 
-#### 主な担当業務  
+</details>
+
+<details>
+<summary style="display: list-item">主な担当業務</summary>
+
 - 複数画面のAPI繋ぎ込み
 - react-pdfを使用したWebフロントでのPDF生成
 - 複数ファイルのアップロード機能
@@ -551,12 +578,16 @@ TODO: Terraformを使用したIaCの導入の思考を書く
 </table>
 
 <details>
+<summary style="display: list-item">プロジェクト概要と担当領域</summary>
 
-#### プロジェクト概要と担当領域
 メガネの販促アプリ。購入後は保険証をアプリで管理することが出来る。
 実際にメガネを購入するユーザーが使用するAndroidアプリと、ネイティブアプリに提供するAPIサーバーを作成。
 
-#### 主な担当業務
+</details>
+
+<details>
+<summary style="display: list-item">主な担当業務</summary>
+
 - バックエンド
   - 友達招待機能
   - Railsアップグレード(4.2->5.2)
