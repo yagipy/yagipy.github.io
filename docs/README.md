@@ -124,13 +124,15 @@ Webフロントエンド/バックエンドに関する見積作成や設計、�
   </tr>
 </table>
 
-<details><summary>プロジェクト概要と担当領域</summary>
+<details>
+<summary>プロジェクト概要と担当領域</summary>
 
 オンライン診療や医師とのチャットを行うことができるアプリです。  
 患者用のWebアプリと医療従事者用のWebアプリ、システム管理者用のWebアプリ、各Webアプリとネイティブアプリに提供するAPIサーバー、インフラ構築を担当しました。
 </details>
 
-<details><summary>主な担当業務</summary>
+<details>
+<summary>主な担当業務</summary>
 
 - 設計(DB設計、API設計、技術選定)
 - 外部APIとのフロー構築
@@ -148,7 +150,8 @@ Webフロントエンド/バックエンドに関する見積作成や設計、�
 - graphql-code-generatorを使用したAPI呼び出し処理及び型の自動生成
 </details>
 
-<details><summary>利用技術や技術選定に関する思考と行動</summary>
+<details>
+<summary>利用技術や技術選定に関する思考と行動</summary>
 
 大きく3つのチャレンジを行いました。
 - Goの全面的な導入
