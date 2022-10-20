@@ -121,7 +121,7 @@ Webフロントエンド/バックエンドに関する見積作成、設計(DB�
     <td>
       フロントエンド: TypeScript、React、vite、Chakra UI<br />
       バックエンド: Go、gqlgen、ent<br />
-      インフラ: AWS、ECS、Fargate、SNS、SES、Aurora(MySQL互換)、CloudFront、Route53、ALB<br />
+      インフラ: Terraform、AWS、ECS、Fargate、SNS、SES、Aurora(MySQL互換)、CloudFront、Route53、ALB<br />
       その他: GitHub Actions、GMOPayment、Twilio、OMRON connect Cloud
     </td>
   </tr>
@@ -138,19 +138,14 @@ Webフロントエンド/バックエンドに関する見積作成、設計(DB�
 <summary style="display: list-item">主な担当業務</summary>
 
 - 設計(DB設計、API設計、技術選定)
-- 外部APIとのフロー構築
 - gqlgen、entを使用したベースコードの構築
-- vite、chakra UI、graphql-code-generatorを使用したベースコードの構築
-- GraphQL subscription、redis pub/sub、goroutineを使用したリアルタイムチャット機能の検証及び実装
-- Twilioを使用したビデオ通話機能の実装(サーバー側)
-- GMOPaymentを使用した定期課金機能
-- お客さんとのMTG
-  - 技術的な部分に関しての質問回答
-- 工数見積
-- サーバーサイドのスケジュール/進捗管理
-- 品質管理(レビュー、ペアプロ)
-- 業務委託面談
-- graphql-code-generatorを使用したAPI呼び出し処理及び型の自動生成
+- Vite、Chakra UI、Graphql Code Generatorを使用したベースコードの構築
+  - Graphql Code Generatorを使用したAPI呼び出し処理(hooks)及び型定義の自動生成
+- GraphQL Subscription、Redis Pub/Sub、goroutineを使用したリアルタイムチャット機能の検証及び実装
+- Twilioを使用したビデオ通話機能の実装(API側のみ)
+- GMOPaymentを使用した定期課金機能の実装
+- OMRON connect Cloudを使用した体温計の連携機能の実装
+
 </details>
 
 <details>
@@ -263,17 +258,14 @@ Project-based monorepoの導入の際に考えたことを書きます。
 
 <details>
 <summary style="display: list-item">主な担当業務</summary>
- 
+
 - 設計(DB設計、API設計、技術選定)
-- grpc-gatewayを使用したGoサーバーのベースコード作成
-- gRPCを使用したRubyサーバーのベースコード作成
-- Next.jsを使用したWebクライアントのベースコード作成
-- ECS on Fargateでのインフラ構築
+- grpc-gateway、grpc_tools_ruby_protocを使用したgRPCサーバーのベースコード構築(Ruby、Go)
+- Next.js、TailwindCSS、Recoilを使用したベースコードの構築
+- Amazon ECS、AWS Fargateを使用したインフラの構築
 - GitHub Actionsを使用した自動デプロイフローの構築
 - guardを使用したRubyサーバーのオートリロード
-- スケジュール、進捗管理
-- 品質管理(レビュー、ペアプロ)
-- 業務委託面談
+- APIのページネーションとフィルタリング機能の共通モジュールの実装
 
 </details>
 
@@ -283,7 +275,7 @@ Project-based monorepoの導入の際に考えたことを書きます。
 大きく3つのチャレンジを行いました。
 - Goの部分的な導入
 - gRPCを使用したスキーマ駆動開発の導入
-- ECS on Fargateの導入
+- Amazon ECSとAWS Fargateの導入
 
 ---
 
@@ -342,8 +334,8 @@ gRPCではなくOpenAPIを使用することも考えましたが、下記のよ
 
 ---
 
-最後に、ECS on Fargateの導入をした際に考えたことについて書きます。
-ECS on Fargateは、サーバーレスかつコンテナ化を実現するために導入を行いましたので、ここではなぜサーバーレスかつコンテナ化を実現したかったのかについて書きます。
+最後に、Amazon ECSとAWS Fargateの導入をした際に考えたことについて書きます。
+Amazon ECSとAWS Fargateは、サーバーレスかつコンテナ化を実現するために導入を行いましたので、ここではなぜサーバーレスかつコンテナ化を実現したかったのかについて書きます。
 今まではAWS EC2にAnsibleでプロビジョニングする形でしたが、下記のような問題がありました。
 - 初回と2回目以降の処理をそれぞれ記述しなければならない
 - 開発環境とSTG/PRD環境でそれぞれ実行環境が違う
@@ -399,15 +391,14 @@ ECS on Fargateは、サーバーレスかつコンテナ化を実現するため
 <summary style="display: list-item">主な担当業務</summary>
 
 - 技術選定
-- Serverless Frameworkを使用したベースコードの作成
-- Next.js、Recoil、TailwindCSSを使用したベースコードの作成
+- Serverless Frameworkを使用したベースコードの構築
+- Next.js、Recoil、TailwindCSSを使用したベースコードの構築
 - LDAP認証の実装
-- Sambaへのファイルアップロード実装
+  - ディレクトリサービスはActive Directoryを使用
+- Sambaサーバーへのファイルアップロード実装
   - Lambda上でAmazonLinux2のネイティブバイナリパッケージ(samba-client)を使用することで実現
 - CSVをstreamにして読み込みつつDBにインサートするバッチ処理の実装
-- 各種APIの実装
-- スケジュール、進捗管理
-- 品質管理(レビュー、ペアプロ)
+- ldapjsを使用したパスワード変更機能の実装
 
 </details>
 
@@ -451,10 +442,10 @@ Webアプリは新しくRecoilを導入しました。
   <tr>
     <td>主な使用技術</td>
     <td>
-      フロントエンド: TypeScript、React、Next.js、Redux、Redux Saga、Apollo Client<br />
+      フロントエンド: TypeScript、React、Next.js、Redux、Redux Toolkit、Redux Saga、Apollo Client<br />
       バックエンド: Ruby、Ruby on Rails、graphql-ruby、capistrano<br />
       インフラ: Terraform、AWS、EC2、RDS、ALB、S3、CloudFront<br />
-      その他: GitHub Actions
+      その他: CircleCI
     </td>
   </tr>
 </table>
@@ -470,10 +461,8 @@ Webアプリは新しくRecoilを導入しました。
 <details>
 <summary style="display: list-item">主な担当業務</summary>
  
-- graphql-rubyを使用したGraphQLサーバーのベースコード作成
-  - 管理者のCRUDとログイン機能の実装
-- Next.jsを使用したWebアプリのベースコード作成
-  - 管理者のCRUDとログイン機能の実装
+- graphql-rubyを使用したベースコードの構築
+- Next.js、Apollo Client、Redux、Redux Toolkitを使用したベースコードの構築
 - Terraformを使用したインフラ構築
 
 </details>
@@ -527,9 +516,9 @@ TODO: Terraformを使用したIaCの導入の思考を書く
   <tr>
     <td>主な使用技術</td>
     <td>
-      フロントエンド: TypeScript、React、crate-react-app、Redux、react-pdf、react-table<br />
-      バックエンド: Ruby、Ruby on Rails、graphql-ruby、capistrano<br />
-      その他: GitHub Actions、Circle CI、Ansible
+      フロントエンド: TypeScript、React、Create React App、Redux、react-pdf、react-table<br />
+      バックエンド: Ruby、Ruby on Rails、capistrano<br />
+      その他: GitHub Actions、CircleCI、Ansible
     </td>
   </tr>
 </table>
@@ -538,7 +527,7 @@ TODO: Terraformを使用したIaCの導入の思考を書く
 <summary style="display: list-item">プロジェクト概要と担当領域</summary>
  
 ハウスメーカーと住宅を購入した顧客がコミュニケーションを取るアプリです。
-顧客が使用するWebアプリと大手ハウスメーカーが使用するWebアプリ、それぞれのWeb画面に提供するAPIの開発を担当。
+顧客が使用するWebアプリと大手ハウスメーカーが使用するWebアプリ、それぞれのWeb画面に提供するAPIの開発を担当しました。
 
 </details>
 
@@ -547,10 +536,10 @@ TODO: Terraformを使用したIaCの導入の思考を書く
 
 - 複数画面のAPI繋ぎ込み
 - react-pdfを使用したWebフロントでのPDF生成
-- 複数ファイルのアップロード機能
+- 複数画像のアップロード機能
 - react-tableを使用した週次カレンダー機能の作成  
-- 各区分ごとにソートを行う処理
-- パフォーマンスの最適化
+- 各区分ごとにソートを行う処理の実装
+- 上記ソート処理のパフォーマンス最適化
 
 </details>
 
@@ -575,7 +564,7 @@ TODO: Terraformを使用したIaCの導入の思考を書く
     <td>主な使用技術</td>
     <td>
       Android: Java、Android、Dagger、RxJava<br />
-      バックエンド: Ruby、Ruby on Rails、graphql-ruby、capistrano<br />
+      バックエンド: Ruby、Ruby on Rails<br />
       その他: GitHub Actions、Circle CI、Ansible
     </td>
   </tr>
