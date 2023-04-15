@@ -1,5 +1,5 @@
 このページは @yagipy の職務経歴を紹介するページです。  
-最終更新日: 2022/12/10
+最終更新日: 2023/4/15
 
 ## 目次
 - 基本情報
@@ -7,14 +7,13 @@
   - 理想像と現在の行動
   - 興味
 - 職務経歴
-  - からくり株式会社 (2019年4月 ~ 在職中)
+  - からくり株式会社 (2019年4月 ~ 2023年1月)
   - 株式会社taliki (2018年6月 ~ 2019年3月)
   - 株式会社Hatty&Co. (2018年6月 ~ 2018年10月)
 - 個人の活動
   - 登壇
   - OSS
-  - OSS以外の個人プロジェクト
-  - コミュニティ
+  - その他
 - 各種リンク
 
 ## 基本情報
@@ -42,11 +41,11 @@
 </table>
 
 ## 自己紹介
-八木橋拓之(Hiroyuki YAGIHASHI)です。  
-バックエンドエンジニアとして、主にGo/Node.jsを使用したAPIサーバーやライブラリの開発、AWSを用いたインフラ構築を得意としています。  
-Reactを使用したWebクライアントの開発、Go/Node.jsの他にRailsを用いたAPIサーバー開発、Androidアプリ開発も実務経験があります。  
-直近の業務内容は、見積作成、設計(DB設計、API設計、技術選定)、ベースコードの作成、会社単位で導入事例のない技術の検証と実装を行いつつ、他メンバーのサポートをするというのがメインになります。  
-サポートは主にレビューやペアプロ等を通して、設計意図の共有やメンバーが設計に沿った実装を行えるようにしています。
+八木橋拓之(Hiroyuki YAGIHASHI)です。 バックエンドエンジニアです。特にGo/Node.jsを使用したAPIサーバーの開発、AWSを用いたインフラ構築を得意としています。  
+Reactを使用したWebクライアントの開発、PythonやRuby(Ruby on Rails)を用いたAPIサーバー開発、Androidアプリ開発も実務経験があります。  
+直近の業務内容は、見積作成、設計(DB設計、API設計、技術選定)、ベースコードの作成、会社単位で導入事例のない技術の検証と実装を行いつつ他メンバーのサポートをするというのがメインになります。  
+サポートは主にレビューやペアプロ等を通して設計意図の共有やメンバーが設計に沿った実装を行えるようにしています。  
+個人の活動では、JS Conf JPやGo Release Partyでの登壇、Node.jsやgolangci-lintへのコントリビュート、プログラミング言語や静的解析ツールの自作等の経験があります。
 
 ### 理想像と現在の行動
 2025年までには**大規模OSSと複雑なシステムの開発をリードする存在になり、様々な技術的課題を解決する**という理想像があります。  
@@ -825,18 +824,26 @@ SNS上で応援を集められるサービス[ちあちあ](https://prtimes.jp/m
 
 ## 個人の活動
 ### 登壇
+- Althea〜安全で安定したコードを簡単に書ける言語〜@[SecHack365 2022 成果発表会](https://sechack365.nict.go.jp/report/2022/report_presentation.html)
+  - 優秀修了生として自作プログラミング言語Altheaの発表を行いました
+  - [ポスター&動画](https://sechack365.nict.go.jp/achievement/2022/index.html#exc05)
 - What is Soft Memory Limit?@[Go 1.19 Release Party](https://gocon.connpass.com/event/253355)
+  - Goのバージョン1.19で導入されたSoft Memory Limitの導入背景や機能について発表しました
   - [登壇資料](https://speakerdeck.com/yagipy/what-is-soft-memory-limit)
   - [ブログ記事](https://blog.yagipy.me/go119party)
 - Building markdown editor using Rust’s parser@[JS Conf JP 2021](https://jsconf.jp/2021)
+  - 自作マークダウンエディタに関する発表を行いました
   - [登壇資料](https://speakerdeck.com/yagipy/building-markdown-editor-using-rusts-parser)
   - [ブログ記事](https://blog.yagipy.me/jsconfjp-2021)
 - OSSに貢献した話と社内での取り組みについて@[技育祭2021](https://talent.supporterz.jp/geeksai/2021)
+  - DroidKaigiの公式アプリにコントリビュートした話と、関連して社内で行っていた教育施策について発表しました
   - [登壇資料](https://speakerdeck.com/yagipy/ossnigong-xian-sitahua-toshe-nei-tefalsequ-rizu-minituite)
   - [ブログ記事](https://blog.yagipy.me/geeksai-lt)
 - 簡易的な推薦機能を実装する@社内LT
+  - Ruby on Railsで簡易的な推薦機能を実装する方法について発表しました
   - [登壇資料](https://speakerdeck.com/yagipy/jian-yi-de-natui-jian-ji-neng-woshi-zhuang-suru)
 - Git/GitHub oneliner command@社内LT
+  - Git/GitHubを簡単に操作するための自作コマンドラインツールについて発表しました(実装はGo言語を使用)
   - [登壇資料](https://speakerdeck.com/yagipy/github-oneliner-command)
 
 ### OSS
@@ -844,44 +851,50 @@ Owner - 私自身が作成し運用しているOSSになります
 Maintainer - リポジトリに対するWrite権限を持っているOSSになります  
 Contributor - コントリビュートしたことのあるOSSになります(ここでは私自身が作成したPRがマージされたことのあるOSSに限定しています)
 
+- Owner - [Althea](https://github.com/yagipy/althea)
+  - 自作のプログラミング言語です
+  - 所有権付き参照カウントという特徴的なメモリ管理手法を実装しました
+  - 基本的な言語機能に加えてHTTPサーバーの起動が可能です
+  - 実装にはRustとLLVMを使用しています
 - Owner - [maintidx](https://github.com/yagipy/maintidx)
-  - maintainability indexを計測するために作成した静的解析ツールです 
+  - Maintainability indexというソースコードの保守性指標を計測する静的解析ツールです 
   - GitHub Starを60以上獲得しています
   - 詳しくは[こちら](https://blog.yagipy.me/analyze-maintainability-index)
+- Owner - [runlive](https://runlive.netlify.app/)
+  - 複数言語が実行可能なプレイグラウンドです
+    - 現在はPythonのみサポートしています
+  - WebRTCを使用したリアルタイムに変更が反映されるコラボレーション機能、wasmを使用したWeb完結でのソースコード実行機能、ソースコードのシェア機能があります
+  - 今後はデプロイ機能やアカウント管理機能も追加する予定です
 - Owner - [chameleon editor](https://cameleon-editor.netlify.app/)
   - HTML、スライド、マインドマップに描画可能なマークダウンエディタです 
   - マークダウンパーサーはRustとwasmを使用しています
   - 詳しくは[こちら](https://blog.yagipy.me/md-editor-with-rust-parser-on-the-web)
 - Owner - [blog](https://blog.yagipy.me/)
-  - Next.js使用、TailwindCSS使用、PWA対応、AMP対応、OGP画像の自動生成等を行っています
+  - Next.jsとTailwindCSSを使用しています
+  - PWA、AMP、OGP画像の自動生成に対応しています
   - 詳しくは[こちら](https://blog.yagipy.me/build-blog)
 - Maintainer - [golangci-lint](https://github.com/golangci/golangci-lint)
-  - Goの静的解析ツールをまとめて実行してくれるツールです
+  - Goの静的解析ツールをまとめて実行するツールです
   - [maintidx](https://github.com/yagipy/maintidx) を追加する実装をしました
 - Contributor - [go-gimei](https://github.com/mattn/go-gimei)
+  - 適当な日本人の名前や住所をランダムに生成するライブラリです
   - レースコンディションを回避する実装をしました
 - Contributor - [Node.js](https://github.com/nodejs/node)
+  - JavaScriptの実行環境です
   - fsPromise.writeFileのdata引数としてasync iteratorsをサポートする実装をしました
   - 詳しくは[こちら](https://blog.yagipy.me/nodejs-writefile-support-async-iterators)
 - Contributor - [DroidKaigi conference app 2021](https://github.com/DroidKaigi/conference-app-2021)
+  - Android開発者のイベントであるDroidKaigiの公式アプリです
   - ダークモードの対応や軽微な修正を行いました
 
-### OSS以外の個人プロジェクト
-- [runlive](https://runlive.netlify.app/)
-  - 事業化を目指しており、現在ソースコードはプライベートで開発しています 
-  - 複数言語が実行可能なプレイグラウンドです
-    - 現在はPythonのみサポートしています
-  - WebRTCを使用したリアルタイムに変更が反映されるコラボレーション機能、wasmを使用したWeb完結でのソースコード実行機能、ソースコードのシェア機能があります 
-  - 今後はデプロイ機能やアカウント管理機能も追加する予定です
-
-### コミュニティ
-- トレーニー - [SecHack365](https://sechack365.nict.go.jp)
-  - [SecHack365](https://sechack365.nict.go.jp)という、セキュリティイノベーター人材育成のためにNICTが主催しているプログラムに参加しています
-  - 2022年度のトレーニーとして参加しています
-  - RustとLLVMを使用して、プログラミング言語を作成しています
-    - 所有権付き参照カウントという、特徴的なメモリ管理機能を実装しています
+### その他
+- 優秀修了 - [SecHack365](https://sechack365.nict.go.jp)
+  - [SecHack365](https://sechack365.nict.go.jp)はセキュリティイノベーター人材育成のためにNICTが主催しているプログラムです
+  - RustとLLVMを使用して[Althea](https://github.com/yagipy/althea)というプログラミング言語を作成し、優秀修了生に認定されました
+    - 所有権付き参照カウントという、特徴的なメモリ管理機能を実装しました 
 - Staff - [Go Conference](https://gocon.jp)
   - [2022 Spring](https://gocon.jp/2022spring/) から運営のお手伝いをしています
+  - ビンGoやハンズオン等、コンテンツを担当する班に所属しています
 
 ## 各種リンク
 - [GitHub](https://github.com/yagipy)
